@@ -15,13 +15,13 @@ public class App {
         CardCollection coleccionCartas;
         switch (eleccion) {
             case 1:
-                coleccionCartas = new HashMapCardCollection(); // Crea la colección usando HashMap
+                coleccionCartas = CardCollectionFactory.createMap(CardCollectionFactory.MapType.HASH_MAP); // Crea la colección usando HashMap
                 break;
             case 2:
-                coleccionCartas = new TreeMapCardCollection(); // Crea la colección usando TreeMap
+                coleccionCartas = CardCollectionFactory.createMap(CardCollectionFactory.MapType.TREE_MAP); // Crea la colección usando TreeMap
                 break;
             case 3:
-                coleccionCartas = new LinkedHashMapCardCollection(); // Crea la colección usando LinkedHashMap
+                coleccionCartas = CardCollectionFactory.createMap(CardCollectionFactory.MapType.LINKED_HASH_MAP); // Crea la colección usando LinkedHashMap
                 break;
             default:
                 System.out.println("Opción inválida. Se usará la implementación predeterminada de HashMap.");
