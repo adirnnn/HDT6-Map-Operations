@@ -46,6 +46,9 @@ public class App {
         }
 
         int opcion;
+        long startTime = 0;
+        long endTime = 0;
+        long duration = 0;
         // Ciclo para mostrar el menú y procesar las opciones del usuario
         do {
             // Menú de opciones
@@ -79,16 +82,32 @@ public class App {
                     }
                     break;
                 case 3:
+                    startTime = System.nanoTime();
+                    endTime = System.nanoTime();
+                    duration = endTime - startTime;
                     coleccionCartas.mostrarColeccionCartas();
+                    System.out.println("Tiempo transcurrido 'mostrarColeccionCartas' : " + duration + " nanoseconds");
                     break;
                 case 4:
+                    startTime = System.nanoTime();
+                    endTime = System.nanoTime();
+                    duration = endTime - startTime;
                     coleccionCartas.mostrarColeccionCartasOrdenadaPorTipo();
+                    System.out.println("Tiempo transcurrido 'mostrarColeccionCartasOrdenadaPorTipo' : " + duration + " nanoseconds");
                     break;
                 case 5:
+                    startTime = System.nanoTime();
+                    endTime = System.nanoTime();
+                    duration = endTime - startTime;
                     coleccionCartas.mostrarTodasLasCartas();
+                    System.out.println("Tiempo transcurrido 'mostrarTodasLasCartas' : " + duration + " nanoseconds");
                     break;
                 case 6:
+                    startTime = System.nanoTime();
+                    endTime = System.nanoTime();
+                    duration = endTime - startTime;
                     coleccionCartas.mostrarTodasLasCartasOrdenadasPorTipo();
+                    System.out.println("Tiempo transcurrido 'mostrarTodasLasCartasOrdenadasPorTipo' : " + duration + " nanoseconds");
                     break;
                 case 0:
                     System.out.println("Saliendo...");
